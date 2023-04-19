@@ -8,22 +8,8 @@ android {
     compileSdk 33
 
     signingConfigs {
-        release {
-            Properties keyProps = new Properties()
-            keyProps.load(new FileInputStream(file("../keystore.props.file")))
-            storeFile file(keyProps["storeFile"])
-            storePassword keyProps["storePassword"]
-            keyAlias keyProps["keyAlias"]
-            keyPassword keyProps["keyPassword"]
-        }
-
         debug {
-            Properties keyProps = new Properties()
-            keyProps.load(new FileInputStream(file("../keystore.props.file")))
-            storeFile file(keyProps["storeFile"])
-            storePassword keyProps["storePassword"]
-            keyAlias keyProps["keyAlias"]
-            keyPassword keyProps["keyPassword"]
+
         }
     }
 
@@ -51,7 +37,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
 
         debug {
