@@ -14,7 +14,6 @@
 .cxx
 local.properties
 ReleaseKeystore
-app.properties
 keystore.props.file
 /.idea/**
 /gradle/wrapper/gradle-wrapper.jar
